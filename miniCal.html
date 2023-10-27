@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #parent{
+      border:1px solid black;
+      margin:auto;
+      text-align: center;
+      width: 40%;
+      height:auto;
+      padding-bottom:2px;
+    }
+    #mid{
+      margin-bottom:2%;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <div id="up">
+      <h2 id="display"></h2>
+    </div>
+    <div id="mid">
+      <input type="number" id="first" placeholder="Enter 1st Number">
+      <input type="number" id="second" placeholder="Enter 2nd Number">
+    </div>
+    <div id="down">
+      <button onclick="add()">Add</button>
+      <button onclick="sub()">Subtract</button>
+      <button onclick="multi()">Multiply</button>
+      <button onclick="div()">Divide</button>
+      <button onclick="cancle()">Cancle</button>
+    </div>
+  </div>
+</body>
+<script>
+  let head=document.getElementById("display");
+  let input1=document.getElementById("first");
+  let input2=document.getElementById("second");
+  function add(){
+    head.innerText= +input1.value + +input2.value
+  }
+  function sub(){
+    head.innerText= +input1.value - +input2.value
+  }
+  function multi(){
+    head.innerText= +input1.value * +input2.value
+  }
+  function div(){
+    head.innerText= +input1.value / +input2.value
+  }
+  function cancle(){
+    head.innerText=" "
+  }
+</script>
+</html>

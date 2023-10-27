@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+    <script type="text/javascript">
+      let head=document.getElementById("dName")
+      let inp1=document.getElementById("name")
+		function showName() {
+            head.innerText= inp1.value
+			// Show filled name inside h1
+		}
+        let hea=document.getElementById("dGender")
+      let inp2=document.getElementById("gender")
+		function showGender() {
+            hea.innerText= inp2.value
+			// Show the selected gender inside h2
+		}
+        let he=document.getElementById("dEmail")
+      let inp3=document.getElementById("email")
+		function showEmail() {
+            he.innerText= inp3.value
+			// Show the filled email inside h3
+		}
+        let h=document.getElementById("dMobile")
+      let inp4=document.getElementById("mobile")
+		function showMobile() {
+            h.innerText= inp4.value
+			// Show the filled mobile inside h4
+		}
+
+		function resetForm() {
+            inp1.value=" "
+            inp2.value=" "
+            inp3.value=" "
+            inp4.value=" "
+			// Reset all the form elements to default values (blank "")
+		}
+
+		function resetDisplay() {
+            head.innerText=" "
+            hea.innerText=" "
+            he.innerText=" "
+            h.innerText=" "
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+		}
+	</script>
+</body>
+</html
